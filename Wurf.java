@@ -10,7 +10,7 @@ public class Wurf {
         //System.out.println(ohneNachkomma);
 
         //int wuerfelaufgen = ohneNachkomma + 1;
-        //System.out.println(wuerfelaufgen);
+        //System.out.println(wuerfelaufgen)
        int wuerfel;
         do {
             wuerfel = (int)(Math.random() * 6) + 1; // Generate random number from 1 to 6
