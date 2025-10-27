@@ -8,7 +8,7 @@ public class Fac {
     }
 
     public static void main(String[] args) {
-        int n = 10;
+        int n = 14;
         int result = fac(n);
         System.out.println(n + "! = " + result);
     }
