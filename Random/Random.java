@@ -7,5 +7,9 @@ public class Random {
         for (int i = 0, i < zufallszahlen.length, i++) {
             zufallszahlen[i] = Math.random();
         }
+
+        printArray(zufallszahlen);
+
+        
     }
 }
