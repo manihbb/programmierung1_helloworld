@@ -1,26 +1,26 @@
-public class Rectangle {
+class Rectangle {
     private int width;
     private int height;
 
-    public Rectangle(int width, int height) {
+    Rectangle(int width, int height) {
         this.width = width;
         this.height = height;
     }
 
-    public Rectangle() {
+    Rectangle() {
         this.width = 0;
         this.height = 0;
     }
 
-    public int area() {
+    int area() {
         return width * height;
     }
 
-    public int perimeter() {
+    int perimeter() {
         return 2 * (width + height);
     }
 
-    public boolean isSquare() {
+    boolean isSquare() {
         return width == height;
     }
 
@@ -32,13 +32,29 @@ public class Rectangle {
         StringBuilder sb = new StringBuilder();
         for (int i = 0; i < height; i++) {
             for (int j = 0; j < width; j++) {
-                sb.append("* ");
+                if (i == 0 || i == height - 1 || j == 0 || j == width - 1) {
+                    sb.append("* ");
+                } else {
+                    sb.append("  ");
+                }
             }
-            sb.append("\n");
-        }
-        if (sb.length() > 0) {
-            sb.setLength(sb.length() - 1);
+            if (i < height - 1) {
+                sb.append("\n");
+            }
         }
         return sb.toString();
+    }
+
+    public static void main(String[] args) {
+        Rectangle rectangle = new Rectangle(5, 3);
+        Rectangle square = new Rectangle(2, 2);
+
+        System.out.println(rectangle.isSquare());
+        System.out.println(rectangle.perimeter());
+        System.out.println(rectangle.area());
+        System.out.println(rectangle.toString());
+
+        System.out.println(square.isSquare());
+        System.out.println(square);
     }
 }
